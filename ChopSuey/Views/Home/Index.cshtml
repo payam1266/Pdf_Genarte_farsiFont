@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<link href="~/css/videobody.css" rel="stylesheet" />
+<link href="~/css/home.css" rel="stylesheet" />
+<script src="~/js/site.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Philosopher:wght@700&family=Poppins:wght@400;500&family=Work+Sans&display=swap" rel="stylesheet">
+<style>
+    .videotext {
+        position: absolute;
+        top: 16%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: whitesmoke;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        font-size: 2px;
+    }
+
+</style>
+
+<div class="container-fluid" style="padding:0px">
+
+    <video autoplay loop muted id="backgroundvideo" controls="controls">
+
+        <source src="~/video/recording%202%202023-10-12%20170516.mp4" type="video/mp4" />px
+
+    </video>
+
+    <div class="videotext">
+
+        <h2 class="textflow" style="font-size:32px">Aerials</h2>  <h2 class="textflow" style="font-size:32px">In The Sky</h2>
+        <h2 class="textflow" style="font-size:32px">When You Lose Small Mind</h2>  <h2 class="textflow" style="font-size:32px">You Free Your Life</h2>
+        <h2 class="textflow" style="font-size:32px">Aerials</h2>  <h2 class="textflow" style="font-size:32px">So Up High</h2>
+        <h2 class="textflow" style="font-size:32px">When You Free Your Eys</h2>
+        <h2 class="textflow" style="font-size:32px">Eternal Prize</h2>
+    </div>
+
+</div>
+<div style="margin:30px">
+    <img src="~/pictuere/wireframe - 1 (2).jpg" style="padding:5px;align-self:center"/>
+</div>
+<script>
+
+    $(function () {
+        let textvideo = $(".textflow");
+        textvideo.each(function (index, text) {
+            setTimeout(function () {
+                $(text).addClass("show");
+            }, 1700 * index);
+        });
+    });
+
+</script>
